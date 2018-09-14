@@ -25,4 +25,4 @@ pod 'Then'
 
 ```
 **Sample Demo**
-![IMG_2854.GIF](https://qiita-image-store.s3.amazonaws.com/0/279562/8e2ff6ab-cfe5-f42b-97fb-7d79ea266051.gif)
+
