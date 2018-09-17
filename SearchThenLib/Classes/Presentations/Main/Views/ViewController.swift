@@ -16,20 +16,17 @@ class ViewController: UIViewController {
     private var subView: ViewControllerSubView = ViewControllerSubView()
     var disposeBag: DisposeBag = DisposeBag()
     
-    var viewControllerDelegate: ViewControllerProtocol?
-    
     
 }
 extension ViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.addSubview(self.subView.header)
-        self.subView.header.addSubview(self.subView.label)
+        self.view.addSubview(self.subView.label)
         self.view.addSubview(self.subView.searchInput)
         self.view.addSubview(self.subView.result)
         
-        self.reactor = ViewControllerReactor()
+//        self.reactor = ViewControllerReactor()
     }
     
     override func viewDidLayoutSubviews() {

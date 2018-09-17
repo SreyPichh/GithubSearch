@@ -16,44 +16,26 @@ class ViewControllerReactor: Reactor {
     
     enum Action {
         case search(String)
-        case ditItemSelect(IndexPath)
     }
     enum Mutation {
         case searchValue(String)
-        
 
     }
     var initialState: ViewControllerReactor.State
     struct State {
-        var query: String
-        var repos: [GithubRepositoryModel]
+        var s: String
         }
     
-    private let router: ViewControllerRouter
-    private let viewController: ViewController
-    
-    init(router: ViewControllerRouter, viewController: ViewController) {
-        self.router = router
-        self.viewController = viewController
-        self.initialState = State(query: "", repos: [])    
+    init() {
+        self.initialState = State(s: "")
     }
-    
-}
-
-extension ViewControllerReactor {
     func mutate(action: ViewControllerReactor.Action) -> Observable<ViewControllerReactor.Mutation> {
         switch action {
-
-        case .search(let query):
-            if let `presenter` = self.presenter {
-                .catchError({(error) -> Observable<[GithubRepositoryModel]>})
-            }
-            print(query)
-            return Observable.just(Mutation.searchValue(query))
-        case .ditItemSelect(_): break
-            
+        case .search(let s):
+            print(s)
+            return Observable.just(Mutation.searchValue(s))
         }
-                return Observable.empty()
+//        return Observable.empty()
     }
     
     

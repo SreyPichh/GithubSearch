@@ -22,11 +22,6 @@ class ViewControllerSubView {
         $0.layer.borderWidth = 0.5
         $0.layer.borderColor = UIColor.gray.cgColor
     }
-    
-    let header = UIView().then{
-        $0.backgroundColor = UIColor.lightGray
-    }
-    
     let result = UITableView()
     
     func subViewUpdateConstrain() {
@@ -46,12 +41,6 @@ class ViewControllerSubView {
             make.width.equalToSuperview()
             make.height.equalToSuperview()
             make.top.equalTo(self.searchInput.snp.bottom)
-        }
-        
-        self.header.snp.makeConstraints { (make) in
-            make.width.equalToSuperview()
-            make.height.equalTo(100)
-            
         }
     }
 }
