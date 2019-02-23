@@ -1,6 +1,0 @@
-framework module Pods_SearchThenLib {
-  umbrella header "Pods-SearchThenLib-umbrella.h"
-
-  export *
-  module * { export * }
-}
